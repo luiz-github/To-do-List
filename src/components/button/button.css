@@ -1,0 +1,28 @@
+@import './../../styles/variables.css';
+
+.button-primary {
+    display: inline;
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+}
+
+button {
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid transparent;
+    padding: var(--padding-sm);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-family-base);
+    cursor: var(--cursor-pointer);
+    transition: var(--transition-fast);
+}
+
+button:hover {
+    border-color: var(--border-color-hover);
+    color: var(--text-color-hover);
+}
+
+button:focus,
+button:focus-visible {
+    outline: var(--focus-outline);
+}

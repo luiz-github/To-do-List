@@ -1,0 +1,27 @@
+:root {
+    /* Borders */
+    --border-width: 1px;
+    --border-color: white;
+    --border-color-hover: black;
+    --border-radius: 8px;
+    --border-radius-lg: 10px;
+
+    /* Spacing */
+    --padding-sm: 0.6em 1.2em;
+    --margin-right-sm: 10px;
+
+    /* Fonts */
+    --font-size-base: 1em;
+    --font-weight-medium: 500;
+    --font-family-base: inherit;
+
+    /* Cursor & Transition */
+    --cursor-pointer: pointer;
+    --transition-fast: border-color 0.25s;
+
+    /* Focus */
+    --focus-outline: 4px auto -webkit-focus-ring-color;
+
+    /* Colors */
+    --text-color-hover: black;
+}

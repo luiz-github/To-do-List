@@ -1,0 +1,6 @@
+.inputDefault {
+    display: inline;
+    margin-right: var(--margin-right-sm);
+    flex: 1;
+    border-radius: var(--border-radius-lg);
+}
