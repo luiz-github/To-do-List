@@ -20,13 +20,13 @@ Aplicativo web simples e funcional para gerenciamento de tarefas, desenvolvido c
 
 ```bash
 # Clone o repositório
-git clone { ADICIONAR REPOSITORIO }
+git clone https://github.com/luiz-github/To-do-List
 
 # Acesse o projeto
-cd todo-app
+cd To-do-List
 
 # Instale as dependências
-npm install
+yarn install
 
 # Inicie o servidor de desenvolvimento
-npm run dev
+yarn dev
