@@ -16,35 +16,49 @@ function HomePage() {
   }
 
   const handleToggleTask = (taskId: number) => {
-    const  updatedTasks = tasks.map(task =>
-      task.id === taskId ? { ...task, done: !task.done } : task
-    )
-    setTasks(updatedTasks)
+    manager.toggleTask(taskId)
+    setTasks([ ...manager.getTasks() ])
+  }
+
+  const handleDeleteTask = (taskId: number) => {
+    manager.deleteTask(taskId)
+    setTasks([ ...manager.getTasks() ]);
+
   }
 
   return (
     <>
-      <div className='flex-box-item auto-resize'>
-        <Input
-          value={newTask}
-          inputOnChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTask(e.target.value)}
-          inputPlaceHolder="Type a new task"
-        />
-        <Button
-          name="Add Task"
-          btnOnClick={handleAddTask}
-        />
+      <div>
+        <div className='flex-box-item auto-resize'>
+          <Input
+            inputValue={newTask}
+            inputOnChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTask(e.target.value)}
+            inputPlaceHolder="Type a new task"
+          />
+          <Button
+            name="Add"
+            btnOnClick={handleAddTask}
+          />
+        </div>
       </div>
-      <div className=''>
-        <ul>
+      <div>
+        <ul className='grid-container'>
           {tasks.map((task) => (
             
-            <li className='taskName' key={task.id}>
-              {task.text} {task.done ? '(feito)' : ''}
-              <Button
-                name={task.done ? '❌' : '✅'}
-                btnOnClick={() => handleToggleTask(task.id)}
-              />
+            <li className='grid-container-list-item' key={task.id}>
+              <div className='grid-item-name'>
+                {task.text} {task.done ? '(feito)' : ''}
+              </div>
+              <div>
+                <Button
+                  name={task.done ? '✅' : '❌'}
+                  btnOnClick={() => handleToggleTask(task.id)}
+                />
+                <Button
+                  name='Delete'
+                  btnOnClick={() => handleDeleteTask(task.id)}
+                />
+              </div>
             </li>
           ))}
         </ul>

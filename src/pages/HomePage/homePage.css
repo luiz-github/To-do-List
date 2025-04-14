@@ -25,3 +25,18 @@
     width: 360px;
   }
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 10px;
+}
+
+.grid-container-list-item {
+  display: grid;
+  grid-template-columns: auto max-content;
+}
+
+.grid-item-name {
+  text-align: left;
+}
