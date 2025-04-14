@@ -3,25 +3,25 @@
   text-align: center;
 }
 
-.add-bar {
+.flex-box-item {
   display: flex;
   margin: auto ;
 }
 
 @media screen and (min-width: 1080px) {
-  .add-bar{
+  .auto-resize{
     width: 800px;
   }
 }
 
 @media screen and (min-width: 412px) and (max-width: 1080px) {
-  .add-bar{
+  .auto-resize{
     width: 400px;
   }
 }
 
 @media screen and (max-width: 412px) {
-  .add-bar{
+  .auto-resize{
     width: 360px;
   }
 }
